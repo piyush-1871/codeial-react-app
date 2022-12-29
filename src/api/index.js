@@ -84,3 +84,15 @@ export const fetchUserFriends = () => {
     method: 'GET',
   });
 };
+
+export const addFriend = (userId) => {
+  return customFetch(API_URLS.createFriendship(userId), {
+    method: 'GET',
+  });
+};
+
+export const removeFriend = (userId) => {
+  return customFetch(API_URLS.removeFriend(userId), {
+    method: 'GET',
+  });
+};
