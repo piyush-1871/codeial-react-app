@@ -33,15 +33,19 @@ const Home = () => {
         <div className={styles.postWrapper} key={`post-${post._id}`}>
           <div className={styles.postHeader}>
             <div className={styles.postAvatar}>
-              <Link to={`/user/${post.user._id}`}>
               <img
                 src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
                 alt=""
               />
-              </Link>
+
               <div>
                 <Link
-                  to={`/user/${post.user._id}`}
+                  to={{
+                    pathname: `/user/${post.user._id}`,
+                    state: {
+                      user: post.user,
+                    },
+                  }}
                   className={styles.postAuthor}
                 >
                   {post.user.name}
