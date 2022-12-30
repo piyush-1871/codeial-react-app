@@ -80,7 +80,7 @@ function Post({ post }) {
 
         <div className={styles.postActions}>
           <div className={styles.postLike}>
-            <button onClick={handlePostLikeClick}>
+            <button className={styles.likeButton} onClick={handlePostLikeClick}>
               <img
                 src="https://cdn-icons-png.flaticon.com/128/2589/2589175.png"
                 alt=""

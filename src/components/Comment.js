@@ -6,7 +6,6 @@ import styles from '../styles/home.module.css';
 const Comment = ({ comment }) => {
   const { addToast } = useToasts();
   const handleCommentLikeClick = async () => {
-    
     const response = await toggleLike(comment._id, 'Comment');
     if (response.success) {
       if (response.data.deleted) {
@@ -29,10 +28,13 @@ const Comment = ({ comment }) => {
       <div className={styles.postCommentHeader}>
         <span className={styles.postCommentAuthor}>{comment.user.name}</span>
         <span className={styles.postCommentTime}>a minute ago</span>
-        <button onClick={handleCommentLikeClick}>
-          {' '}
-          <span className={styles.postCommentLikes}>{comment.likes.length}</span>
+        <button className={styles.likeButton} onClick={handleCommentLikeClick}>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/2589/2589175.png"
+            alt=""
+          />
         </button>
+        <span className={styles.postCommentLikes}>{comment.likes.length}</span>
       </div>
 
       <div className={styles.postCommentContent}>{comment.content}</div>

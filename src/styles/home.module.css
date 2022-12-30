@@ -107,6 +107,10 @@
 }
 .postCommentHeader {
   display: flex;
+  align-items: center;
+}
+.postCommentHeader img {
+  height: 18px;
 }
 .postCommentHeader .postCommentAuthor {
   font-weight: 600;
@@ -248,4 +252,16 @@
 }
 .addPostBtn:hover {
   cursor: pointer;
+}
+
+.likeButton{
+  border: none; 
+  cursor: pointer;
+  background-color: #fff;
+
+}
+
+.likeButton:hover {
+  background-color: #72dd38;
+  border-radius: 7px ;
 }
