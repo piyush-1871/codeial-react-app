@@ -1,12 +1,30 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from '../styles/navbar.module.css';
 import { useAuth } from '../hooks';
+import { searchUsers } from '../api';
 
 const Navbar = () => {
   const auth = useAuth();
   const [results, setResults] = useState([]);
   const [searchText, setSearchText] = useState('');
+
+  
+  useEffect((e) => {
+    const fetchUsers = async() => {
+      const response = await searchUsers(searchText)
+
+      if(response.success){
+        setResults(response.data.users);
+      }
+    }
+
+    if(searchText.length > 2){
+      fetchUsers();
+    }else{
+      setResults([]);
+    }
+  }, [searchText]);
   return (
     <div className={styles.nav}>
       <div className={styles.leftDiv}>
@@ -38,7 +56,7 @@ const Navbar = () => {
                   className={styles.searchResultsRow}
                   key={`user-${user._id}`}
                 >
-                  <Link to={`/users/${user._id}`}>
+                  <Link to={`/user/${user._id}`}>
                     <img
                       src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
                       alt=""
