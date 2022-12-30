@@ -7,7 +7,7 @@ import {
   fetchUserFriends,
   login as userLogin,
   register,
-  getPosts
+  getPosts,
 } from '../api';
 import {
   setItemInLocalStorage,
@@ -140,7 +140,6 @@ export const useProvideAuth = () => {
   };
 };
 
-
 export const usePosts = () => {
   return useContext(PostsContext);
 };
@@ -163,16 +162,26 @@ export const useProvidePosts = () => {
     fetchPosts();
   }, []);
 
-  const addPostToState = (post)=>{
+  const addPostToState = (post) => {
     const newPosts = [post, ...posts];
 
     setPosts(newPosts);
-  }
+  };
 
+  const addComment = (comment, postId) => {
+    const newPosts = posts.map((post) => {
+      if (post._id === postId) {
+        return { ...post, comments: [...post.comments, comment] };
+      }
+      return post;
+    });
+    setPosts(newPosts);
+  };
 
   return {
     data: posts,
     loading,
-    addPostToState
-  }
+    addPostToState,
+    addComment,
+  };
 };
