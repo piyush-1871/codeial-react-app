@@ -8,7 +8,7 @@ import { useAuth } from '../hooks';
 const UserProfile = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
-  const [requestInProgress, setRequestInProgress] = useState(flase);
+  const [requestInProgress, setRequestInProgress] = useState(false);
   const { userId } = useParams();
   const { addToast } = useToasts();
   const history = useHistory();
