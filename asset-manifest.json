@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/codeial-react-app/static/css/main.40c7d1c4.chunk.css",
+    "main.js": "/codeial-react-app/static/js/main.44c69ab0.chunk.js",
+    "main.js.map": "/codeial-react-app/static/js/main.44c69ab0.chunk.js.map",
+    "runtime-main.js": "/codeial-react-app/static/js/runtime-main.880bbc4f.js",
+    "runtime-main.js.map": "/codeial-react-app/static/js/runtime-main.880bbc4f.js.map",
+    "static/js/2.cc28fa2b.chunk.js": "/codeial-react-app/static/js/2.cc28fa2b.chunk.js",
+    "static/js/2.cc28fa2b.chunk.js.map": "/codeial-react-app/static/js/2.cc28fa2b.chunk.js.map",
+    "index.html": "/codeial-react-app/index.html",
+    "static/css/main.40c7d1c4.chunk.css.map": "/codeial-react-app/static/css/main.40c7d1c4.chunk.css.map",
+    "static/js/2.cc28fa2b.chunk.js.LICENSE.txt": "/codeial-react-app/static/js/2.cc28fa2b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.880bbc4f.js",
+    "static/js/2.cc28fa2b.chunk.js",
+    "static/css/main.40c7d1c4.chunk.css",
+    "static/js/main.44c69ab0.chunk.js"
+  ]
+}
