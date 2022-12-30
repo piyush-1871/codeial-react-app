@@ -156,14 +156,16 @@
 .friendsList {
   background: #fff;
   scroll-behavior: smooth;
-  margin-left: 50px;
+  margin-left: 45px;
   flex-grow: 0.2;
   height: 50vh;
   box-sizing: border-box;
   margin-top: 20px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  max-height: 300px ;
+  min-width: 130px;
+  min-height: 20px;
+  max-height: 300px;
   overflow-y: scroll;
 }
 .friendsList .header {
@@ -179,6 +181,7 @@
 .noFriends {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 20px 0;
 }
 .friendsItem {
@@ -226,6 +229,7 @@
   resize: none;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  font-family: sans-serif;
 }
 .addPostBtn {
   width: 112px;

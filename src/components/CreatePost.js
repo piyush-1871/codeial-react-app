@@ -31,6 +31,7 @@ function CreatePost() {
   return (
     <div className={styles.createPost}>
       <textarea
+      placeholder='Create your post!!'
         className={styles.addPost}
         value={post}
         onChange={(e) => setPost(e.target.value)}
