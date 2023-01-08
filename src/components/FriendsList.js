@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function FriendsList() {
   const auth = useAuth();
   const { friends = [] } = auth.user;
+  console.log(friends);
   return (
     <div className={styles.friendsList}>
       <div className={styles.header}>Friends</div>
@@ -16,11 +17,8 @@ function FriendsList() {
 
       {friends &&
         friends.map((friend) => (
-          <div key={`friend-${friends._id}`}>
-            <Link
-              className={styles.friendsItem}
-              to={`/user/${friend._id}`}
-            >
+          <div key={`friend-${friend._id}`}>
+            <Link className={styles.friendsItem} to={`/user/${friend.to_user._id}`}>
               <div className={styles.friendsImg}>
                 <img src="" alt="" />
               </div>
