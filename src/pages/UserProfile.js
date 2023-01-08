@@ -31,7 +31,7 @@ const UserProfile = () => {
       setLoading(false);
     };
     getUser();
-  }, [userId]);
+  }, [userId,  history, addToast]);
 
   if (loading) {
     return <Loader />;
@@ -49,7 +49,7 @@ const UserProfile = () => {
     return false;
   };
 
-  const handleRemoveFriendClick = async (userId) => {
+  const handleRemoveFriendClick = async () => {
     setRequestInProgress(true);
 
     const response = await removeFriend(userId);

@@ -52,6 +52,7 @@ function Post({ post }) {
       });
     }
   };
+  console.log(post);
   return (
     <div className={styles.postWrapper} key={post._id}>
       <div className={styles.postHeader}>

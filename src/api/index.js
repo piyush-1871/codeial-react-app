@@ -73,27 +73,27 @@ export const editProfile = async (userId, name, password, confirmPassword) => {
 };
 
 export const fetchUserProfile = (userId) => {
-  return customFetch(API_URLS.userInfo(), {
+  return customFetch(API_URLS.userInfo(userId), {
     method: 'GET',
     
   });
 };
 
-export const fetchUserFriends = () => {
-  return customFetch(API_URLS.friends(), {
+export const fetchUserFriends = (userId) => {
+  return customFetch(API_URLS.friends(userId), {
     method: 'GET',
   });
 };
 
 export const addFriend = (userId) => {
   return customFetch(API_URLS.createFriendship(userId), {
-    method: 'GET',
+    method: 'POST',
   });
 };
 
 export const removeFriend = (userId) => {
   return customFetch(API_URLS.removeFriend(userId), {
-    method: 'GET',
+    method: 'POST',
   });
 };
 
